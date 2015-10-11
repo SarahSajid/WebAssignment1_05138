@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<head>
+<title> Learn ABC </title>
+<meta charset="utf-8">
+
+<style>
+@font-face {
+    font-family: AlphabetFont;
+    src: url(AlphabetFont1.ttf);
+}
+
+@font-face {
+    font-family: AlphabetPicture;
+    src: url(abc.ttf);
+}
+
+header {
+    margin:auto;
+    background-color:white;
+	text-align: center
+}
+section {
+    border:1px solid grey;
+    margin:40px;
+	margin-bottom:80px;
+	padding:10px;
+    background-color:rgba(239,239,239,0.4);
+}
+
+article {
+    margin:10px;
+	padding:5px;
+    background-color:rgba(239,239,239,0);
+}
+
+#alphabet {
+	color: black;
+	text-indent: 50px;
+	text-shadow: 2px 1px grey;
+	font-family: AlphabetFont;
+	font-size: 1000%;
+}
+
+#picture {
+	text-align: center;
+	text-shadow: 2px 1px grey;
+	font-family: AlphabetPicture;
+	font-size: 100%;
+	display: inline;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+	padding: 30px;
+}
+
+.option {
+ display: inline;
+}
+
+a {
+    color: black;
+	text-decoration: none;
+}
+
+#correct {
+	padding-top: 100px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	margin: auto;
+	height: 500px;
+	width:800px;
+	z-index: 99999;
+	opacity:0;
+	transition: opacity 100ms ease-in-out;
+	pointer-events: none;
+}
+#correct:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+#incorrect {
+	padding-top: 100px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	margin: auto;
+	height: 500px;
+	width:800px;
+	z-index: 99999;
+	opacity:0;
+	transition: opacity 100ms ease-in-out;
+	pointer-events: none;
+}
+#incorrect:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.close {
+        background: white;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 2px;
+        box-shadow: 1px 1px 3px #000;
+		position: absolute;
+        right: 220px;
+        top: 80px;
+        width: 22px;
+        height: 22px;
+        font-size: 0px;
+    }
+.close:hover { background: #D4482D; }
+
+#title {
+	text-align:center;
+	color: indigo;
+	font-family: Gungsuh;
+	font-size: 0.2em;
+	display: inline-block;
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1><image src="quiz.jpg" width="600" height="400"/></h1>
+</header>
+
+
+
+<section id = "alphabet" style="border:6px solid Red">
+ A
+<article id = "picture">
+<ul>
+<a href="#correct"> <div class="option"> <li> <div id="title" Style="color:Gold"> Anchor </div> a </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li> <div id="title" Style="color:Blue"> Computer </div> c </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li> <div id="title" Style="color:Black"> Elephant </div> e </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li> <div id="title" Style="color:Green"> Tree </div> b </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Gold">
+ B
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Sun </div> s </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Salmon"> Vase </div>v </li> </div> </a>
+<br>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Blue"> Bus </div> o </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Telephone </div> t </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Salmon">
+ C
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Peru"> Zebra </div> z </li> </div> </a>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:HotPink"> Clown </div> C </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Xylophone </div> x </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Radio </div> f </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Red">
+ D
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Bus </div> o </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Guitar </div> g </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Black"> Elephant </div> e </li> </div> </a>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Blue"> Dice </div> W </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid LightGreen">
+ E
+<article id = "picture">
+<ul>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Blue"> Eraser </div> r </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Peru"> Weight </div> w </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Green"> Tree </div> b </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Anchor </div> a </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid MediumVioletRed">
+ F
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Black"> Zebra </div> z </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Purple"> Xylophone </div> x </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Radio </div> f </li> </div> </a>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Navy"> Fish </div> F </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Yellow">
+ G
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Pink"> Island </div> i </li> </div> </a>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Navy"> Glass </div> G </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Stick </div> q </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:HotPink"> Xylophone </div> x </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid OrangeRed">
+ H
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Ladder </div> l </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Kettle </div> k </li> </div> </a>
+<br>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Peru"> Hat </div> h </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Blue"> Telephone </div> t </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Blue">
+ I
+<article id = "picture">
+<ul>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Blue"> Island </div> i </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Black"> Elephant </div> e </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Mushroom </div> p </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Green"> Xylophone </div> x </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid MediumVioletRed">
+ J
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:OrangeRed"> Anchor </div> a </li> </div> </a>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Peru"> Jacket </div> J </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Sun </div> s </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Computer </div> c </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Gold">
+ K
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Aqua"> Island </div> i </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Orange"> Tree </div> b </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Green"> Weight </div> w </li> </div> </a>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:navy"> Knife </div> m </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid MediumVioletRed">
+L
+<article id = "picture">
+<ul>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Green"> LightHouse </div> L </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Weight </div> w </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:HotPink"> Fish </div> F </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Apple </div> A </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Aqua">
+ M
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Navy"> Ball </div> B </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Candle </div> K </li> </div> </a>
+<br>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Peru"> Mouse </div> M </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> House </div> P </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Red">
+ N
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Indigo"> Geeser </div> O </li> </div> </a>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Black"> Needle </div> N </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Peru"> Kettle </div> k </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Sun </div> s </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Green">
+O
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Peru"> Kettle </div> k </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Sun </div> s </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Orange"> Radio </div> f </li> </div> </a>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Orange"> Orange </div> <image src="orange.png" width="200" height="200"/> </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Purple">
+ P
+<article id = "picture">
+<ul>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Black"> Pail </div> E </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Weight </div> w </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Orange"> Radio </div> f </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Pink"> Eraser </div> r </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Gold">
+ Q
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Ladder </div> l </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Kettle </div> k </li> </div> </a>
+<br>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Red"> Queen </div> <image src="queen.png" width="200" height="200"/>  </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Blue"> Telephone </div> t </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid MediumVioletRed">
+ R
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Sun </div> s </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Salmon"> Vase </div>v </li> </div> </a>
+<br>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Peru"> Rhino </div> n </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Telephone </div> t </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid OrangeRed">
+ S
+<article id = "picture">
+<ul>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Gold"> Sun </div> s </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Salmon"> Ladder</div> l </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Blue"> Kettle </div> k </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Telephone </div> t </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid LightGreen">
+ T
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Anchor </div> a </li> </div> </a>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Red"> Telephone </div> t </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Orange"> Clown </div> C </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Purple"> Yatch </div> Y </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Salmon">
+ U
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Salmon"> House </div> P </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Weight </div> w </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Blue"> Island </div> i </li> </div> </a>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Orange"> Umbrella </div> R </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid MediumVioletRed">
+ V
+<article id = "picture">
+<ul>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Indigo"> Vase </div> v </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Ladder </div> l </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Bus </div> o </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:HotPink"> Eraser </div> r </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Aqua">
+ W
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Zebra </div> z </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Kettle </div> k </li> </div> </a>
+<br>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Black"> WallClock </div> U </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Peru"> Hedgehog </div> I </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Gold">
+ X
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Green"> Vase </div> v </li> </div> </a>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Hotpink"> Xylophone </div> X </li> </div> </a>
+<br>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Stick </div> q </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:OrangeRed"> Knife </div> m </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid Green">
+ Y
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Red"> Needle </div> N </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Rhino </div> n </li> </div> </a>
+<br>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Purple"> Yatch </div> Y </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Aqua"> Fish </div> F </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+<section id = "alphabet" style="border:6px solid MediumVioletRed">
+Z
+<article id = "picture">
+<ul>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Gold"> Fish </div> F </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Blue"> House </div> P </li> </div> </a>
+<br>
+<a href="#correct"> <div class="option"> <li><div id="title" Style="color:Peru"> Zebra </div> z </li> </div> </a>
+<a href="#incorrect"><div class="option"> <li><div id="title" Style="color:Aqua"> Glass </div> G </li> </div> </a>
+</ul>
+	<div id="correct"><image src="correct.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+	<div id="incorrect"><image src="incorrect.png" width="400" height="400"><a href="#close" title="Close" class="close">x</a></div>
+</article>
+</section>
+
+</body>
+</html>
